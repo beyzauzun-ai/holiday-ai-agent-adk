@@ -1,8 +1,10 @@
-# Holiday AI Agent with ADK and MCP
+# 🎄 Holiday AI Agent (ADK + MCP + Gemini)
 
-An AI agent built with Google ADK, MCP tools, and Memory for generating holiday scenes and sweater patterns.
+An AI agent that doesn't just respond — it creates.
 
-## Features
+This project demonstrates a context-aware AI agent built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash.
+
+## 🚀 Features
 - Context-aware AI agent with a defined persona
 - MCP tool integration for image generation workflows
 - Holiday scene generation
