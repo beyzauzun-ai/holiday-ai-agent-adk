@@ -1,0 +1,16 @@
+2026-04-16 21:29:17,489 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-04-16 21:31:01,283 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-04-16 21:31:03,013 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-04-16 21:31:03,053 - __main__ - INFO - Generating image with prompt: 
+        Create a cozy, high-fidelity 3D render of...
+2026-04-16 21:31:03,053 - __main__ - INFO - Output path: static/generated_scene.png
+2026-04-16 21:31:03,054 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-04-16 21:31:10,105 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/customerservice-ekntenfjdx5jq3/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2026-04-16 21:32:00,224 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-04-16 21:32:02,440 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-04-16 21:32:02,442 - __main__ - INFO - Generating image with prompt: 
+        Design a seamless, tileable "ugly holiday...
+2026-04-16 21:32:02,442 - __main__ - INFO - Output path: static/generated_pattern.png
+2026-04-16 21:32:02,443 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-04-16 21:32:09,127 - httpx - INFO - HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/customerservice-ekntenfjdx5jq3/locations/us-central1/publishers/google/models/gemini-2.5-flash-image:generateContent "HTTP/1.1 200 OK"
+2026-04-16 21:33:34,068 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
