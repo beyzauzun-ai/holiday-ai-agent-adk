@@ -71,7 +71,7 @@ Instead of just calling a model, this project demonstrates:
 ![Sweater Pattern](static/generated_pattern.png)
 
 ### 🤖 Web UI
-![Web UI](agent.chat.png)
+![Web UI](agent_chat.png)
 
 
 ## 🚀 Getting Started
