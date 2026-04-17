@@ -2,41 +2,97 @@
 
 An AI agent that doesn't just respond — it creates.
 
-This project demonstrates a context-aware AI agent built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash.
+This project demonstrates a **context-aware AI agent system** built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash.
 
-## 🚀 Features
-- Context-aware AI agent with a defined persona
-- MCP tool integration for image generation workflows
-- Holiday scene generation
-- Sweater pattern generation
-- Web-based testing with ADK UI
+---
 
-## Tech Stack
-- Python
-- Google ADK
-- MCP
-- Gemini 2.5 Flash
+## ✨ Overview
 
-## Demo
-This project can:
-- generate festive holiday scenes
-- create themed sweater patterns
-- use connected MCP tools through an AI agent interface
+Instead of a basic chatbot, this AI agent:
 
-## Project Structure
-- `root_agent/` — agent definition and configuration
-- `mcp_server.py` — MCP server and tools
-- `static/` — generated demo outputs
-- `pyproject.toml` — project configuration
+- Understands context with a defined persona
+- Uses tools via MCP to perform actions
+- Generates visual outputs through multi-step workflows
 
-## How to Run
+
+## 🎯 Capabilities
+
+The agent can generate:
+
+- 🎄 Holiday scenes  
+- 🧶 Sweater patterns  
+- 👕 Characters wearing custom designs  
+- 🖼️ Final composed images  
+
+---
+
+## 🔁 Example Workflow
+
+User request:
+
+1. Create a holiday scene  
+2. Design a custom sweater pattern  
+3. Generate a character wearing it  
+4. Combine everything into a final image  
+
+➡️ The agent completes all steps by orchestrating multiple tools.
+
+---
+
+## 🧠 What Makes This Project Interesting
+
+Instead of just calling a model, this project demonstrates:
+
+- Context-aware behavior using memory  
+- Tool usage via MCP  
+- Iterative agent development  
+- Real-time testing with a web UI  
+
+👉 This reflects how modern AI systems move beyond prompts and become **structured, functional agents**.
+
+---
+
+## 🛠️ Tech Stack
+
+- Python  
+- Google ADK (Agent Development Kit)  
+- MCP (Model Context Protocol)  
+- Gemini 2.5 Flash  
+- FastAPI / Uvicorn  
+
+
+## 📸 Example Outputs
+
+### 🎄 Holiday Scene
+![Holiday Scene](static/generated_scene.png)
+
+### 👕 Sweater Pattern
+![Sweater Pattern](static/generated_pattern.png)
+
+### 🤖 Web UI
+![Web UI](agent.chat.png)
+
+
+## 🚀 Getting Started
+
 ```bash
-cd 01-starter
-uv run adk web --port 8000 --allow_origins "regex:https://.*\.cloudshell\.dev"
+git clone https://github.com/beyzauzun-ai/holiday-ai-agent-adk.git
+cd holiday-ai-agent-adk
+pip install -r requirements.txt
 ```
-### Then open the web preview on port 8000.
 
-### Example Prompts
-Hi! Who are you?
-Create a holiday scene with a snowy village
-Create a sweater pattern with pizza slices
+### 🔑 Set your API key:
+
+export GOOGLE_API_KEY=your_api_key_here
+
+### ▶️ Run the agent:
+
+python main.py
+
+### 📌 Next Steps
+
+Improve customization options
+
+Add more tools and workflows
+
+Deploy as a production-ready AI agent system
