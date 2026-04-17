@@ -4,6 +4,8 @@ An AI agent that doesn't just respond — it creates.
 
 This project demonstrates a **context-aware AI agent system** built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash.
 
+### 🎄 Holiday Scene
+
 ![Holiday Scene](static/generated_scene.png)
 
 
@@ -64,8 +66,8 @@ Instead of just calling a model, this project demonstrates:
 
 ## 📸 Example Outputs
 
-### 🎄 Holiday Scene
-![Holiday Scene](static/generated_scene.png)
+### Final Output
+![Final Output](static/final_ai_agent_output.png)
 
 ### 👕 Sweater Pattern
 ![Sweater Pattern](static/generated_pattern.png)
