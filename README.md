@@ -46,6 +46,8 @@ Agent execution:
 
 ## 🏗️ Architecture
 
+This diagram shows how the agent orchestrates multiple tools to generate the final output.
+
 ![Architecture](static/architecture_diagram.png)
 
 ## 🧠 What Makes This Project Interesting
