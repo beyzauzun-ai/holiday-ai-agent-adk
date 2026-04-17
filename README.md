@@ -46,7 +46,7 @@ Agent execution:
 
 ## 🏗️ Architecture
 
-User → Root Agent → MCP Tools → Image Generation Pipeline → Final Output
+![Architecture](static/architecture_diagram.png)
 
 ## 🧠 What Makes This Project Interesting
 
