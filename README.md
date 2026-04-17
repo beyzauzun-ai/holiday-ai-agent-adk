@@ -2,7 +2,7 @@
 
 An AI agent that doesn't just respond — it creates.
 
-This project demonstrates a **context-aware AI agent system** built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash.
+This project demonstrates a context-aware AI agent built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash, capable of orchestrating multiple tools and steps to complete complex tasks autonomously.
 
 ### 🎄 Holiday Scene
 
@@ -31,16 +31,22 @@ The agent can generate:
 
 ## 🔁 Example Workflow
 
-User request:
+User prompt:
 
-1. Create a holiday scene  
-2. Design a custom sweater pattern  
-3. Generate a character wearing it  
-4. Combine everything into a final image  
+"Create a snowy holiday scene and design a pizza-themed sweater"
 
-➡️ The agent completes all steps by orchestrating multiple tools.
+Agent execution:
 
----
+1️⃣ Generate holiday scene  
+2️⃣ Create sweater pattern  
+3️⃣ Generate character wearing it  
+4️⃣ Compose final image  
+
+➡️ All steps are executed automatically via MCP tools.
+
+## 🏗️ Architecture
+
+User → Root Agent → MCP Tools → Image Generation Pipeline → Final Output
 
 ## 🧠 What Makes This Project Interesting
 
@@ -67,7 +73,7 @@ Instead of just calling a model, this project demonstrates:
 ## 📸 Example Outputs
 
 ### Final Output
-![Final Output](static/final_ai_agent_output.png)
+![Final Output](final_ai_agent_output.png)
 
 ### 👕 Sweater Pattern
 ![Sweater Pattern](static/generated_pattern.png)
@@ -100,7 +106,9 @@ Add more tools and workflows
 
 Deploy as a production-ready AI agent system
 
+
 👩‍💻 Author
+
 Beyza Uzun
 
 AI & Data Enthusiast
