@@ -12,6 +12,7 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 
 ## 🎥 Demo Video  
 👉 https://www.linkedin.com/in/beyza-uzun-1520672b5/
+
 ⸻
 
 🧠 What’s new (Update)
@@ -90,6 +91,8 @@ The agent understands context and provides real-time personalized responses thro
 * Enhanced personalization
 * More advanced UI animations
 
+⸻
+
 ## Before the upgrate
 
 This project demonstrates a context-aware AI agent built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash, capable of orchestrating multiple tools and steps to complete complex tasks autonomously.
@@ -104,6 +107,8 @@ This project demonstrates a context-aware AI agent built using Google ADK, MCP (
 ### 🤖 Web UI
 ![Web UI](agent_chat.png)
 
+⸻
+
 ## ✨ Overview
 
 Instead of a basic chatbot, this AI agent:
@@ -111,6 +116,8 @@ Instead of a basic chatbot, this AI agent:
 - Understands context with a defined persona
 - Uses tools via MCP to perform actions
 - Generates visual outputs through multi-step workflows
+
+⸻
 
 ## 🎯 Capabilities
 
@@ -120,6 +127,8 @@ The agent can generate:
 - 🧶 Sweater patterns  
 - 👕 Characters wearing custom designs  
 - 🖼️ Final composed images  
+
+⸻
 
 ## 🔁 Example Workflow
 
@@ -136,11 +145,15 @@ Agent execution:
 
 ➡️ All steps are executed automatically via MCP tools.
 
+⸻
+
 ## 🏗️ Architecture
 
 This diagram shows how the agent orchestrates multiple tools to generate the final output.
 
 ![Architecture](static/architecture_diagram.png)
+
+⸻
 
 ## 🧠 What Makes This Project Interesting
 
@@ -153,6 +166,7 @@ Instead of just calling a model, this project demonstrates:
 
 👉 This reflects how modern AI systems move beyond prompts and become **structured, functional agents**.
 
+⸻
 
 ## 🛠️ Tech Stack
 
@@ -162,6 +176,8 @@ Instead of just calling a model, this project demonstrates:
 - Gemini 2.5 Flash  
 - FastAPI / Uvicorn  
 
+⸻
+
 ## 🚀 Getting Started
 
 ```bash
@@ -170,13 +186,19 @@ cd holiday-ai-agent-adk
 pip install -r requirements.txt
 ```
 
+⸻
+
 ### 🔑 Set your API key:
 
 export GOOGLE_API_KEY=your_api_key_here
 
+⸻
+
 ### ▶️ Run the agent:
 
 python main.py
+
+⸻
 
 ### 👩‍💻 Author
 
