@@ -50,7 +50,6 @@ app = FastAPI(title="Smart Christmas Tree API")
 # Mount static directory for serving images
 # Ensure directory exists
 os.makedirs("static/uploads", exist_ok=True)
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # CORS configuration
 app.add_middleware(
@@ -70,6 +69,8 @@ class ChatResponse(BaseModel):
     response: str
     tree_state: dict
     generated_image: Optional[str] = None
+    tool_used: Optional[str] = None
+
 
 # Initialize ADK services with Vertex AI
 AGENT_ENGINE_ID = os.getenv("AGENT_ENGINE_ID")
@@ -177,6 +178,7 @@ async def chat_endpoint(
         
         final_response_text = ""
         generated_image_url = None
+        tool_used = None
 
         # Iterate through events to find the final response
         async for event in runner.run_async(
@@ -184,6 +186,9 @@ async def chat_endpoint(
             session_id=session_id, 
             new_message=content
         ):
+            if hasattr(event, "tool_name"):
+               tool_used = event.tool_name
+
             logger.info(f"Event received: {type(event)} - {event}")
             if event.is_final_response():
                 # Extract text from the final response
@@ -235,7 +240,8 @@ async def chat_endpoint(
         return {
             "response": final_response_text,
             "tree_state": current_state,
-            "generated_image": generated_image_url
+            "generated_image": generated_image_url,
+            "tool_used": tool_used
         }
         
     except Exception as e:
@@ -270,6 +276,8 @@ async def get_photos():
                 
     return photos
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+app.mount("/", StaticFiles(directory="frontend_dist", html=True), name="frontend")
+
+from fastapi.staticfiles import StaticFiles
+
+

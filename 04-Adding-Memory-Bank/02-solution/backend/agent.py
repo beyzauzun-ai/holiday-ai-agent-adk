@@ -57,6 +57,47 @@ def get_tree_state() -> Dict[str, Any]:
     """
     return TREE_STATE
 
+def apply_preset(preset_name: str) -> Dict[str, Any]:
+    """
+    Applies a named preset to the Christmas tree.
+    """
+    presets = {
+        "classic": {
+            "lights_color": "warm white",
+            "ornament_texture": "default_gold",
+            "theme": "emerald_gold",
+        },
+        "snow": {
+            "lights_color": "cool white",
+            "ornament_texture": "blue_ice",
+            "theme": "snow_crystal",
+        },
+        "romantic": {
+            "lights_color": "soft pink",
+            "ornament_texture": "red_velvet",
+            "theme": "rose_gold",
+        },
+        "minimal": {
+            "lights_color": "warm white",
+            "ornament_texture": "default_gold",
+            "theme": "minimal_white",
+        },
+    }
+
+    key = preset_name.strip().lower()
+    if key not in presets:
+        return {
+            "status": "error",
+            "message": f"Unknown preset: {preset_name}"
+        }
+
+    TREE_STATE.update(presets[key])
+    return {
+        "status": "success",
+        "updated_state": TREE_STATE,
+        "message": f"Applied preset: {preset_name}"
+    }
+
 def analyze_image_and_suggest_texture(image_description: str) -> Dict[str, Any]:
     """
     Analyzes an image description (provided by the model's vision capabilities) and suggests a texture.
@@ -102,20 +143,30 @@ Your goal is to bring holiday cheer by customizing 3D Christmas trees AND genera
     *   **ALWAYS DISPLAY THE GENERATED IMAGE.** The tool returns a filename (e.g., "generated_selfie.png"). You MUST tell the user "Here is the image!" and ensure the UI shows it (the backend handles the URL, but your text confirmation helps).
 5.  **Tree Customization:** You can still help with the tree using `update_tree_config`.
 
-**Available Tools:**
-* `generate_wearing_sweater`: Generate a cute character wearing a sweater with a specific pattern. Can optionally take an `image_path` to personalize the avatar.
-* `generate_holiday_scene`: Generate a holiday scene.
-* `generate_sweater_pattern`: Generate a sweater pattern.
-* `generate_final_photo`: Generate a final photo.
-* `update_tree_config`: Change tree settings.
-* `get_tree_state`: Get current settings.
-* `analyze_image_and_suggest_texture`: Suggest textures.
+    **Available Tools:**
+    * `generate_wearing_sweater`: Generate a cute character wearing a sweater with a specific pattern. Can optionally take an `image_path` to personalize the avatar.
+    * `generate_holiday_scene`: Generate a holiday scene.
+    * `generate_sweater_pattern`: Generate a sweater pattern.
+    * `generate_final_photo`: Generate a final photo.
+    * `update_tree_config`: Change tree settings.
+    * `get_tree_state`: Get current settings.
+    * `analyze_image_and_suggest_texture`: Suggest textures.
+    * `apply_preset`: Apply a named Christmas tree preset such as "classic", "snow", "romantic", or "minimal".
 
-**Example User Requests & Actions:**
-* "Generate a cute person wearing a snowflake sweater" -> Call `generate_wearing_sweater(pattern_description="snowflake pattern")`.
-* "Make me wear this sweater" (with uploaded photo) -> Call `generate_wearing_sweater(pattern_description="...", image_path="/path/to/photo.jpg")`.
-* "Make a holiday scene" -> Call `generate_holiday_scene`.
-* "Design a sweater pattern" -> Call `generate_sweater_pattern`.
+    **Example User Requests & Actions:**
+    * "Generate a cute person wearing a snowflake sweater" -> Call `generate_wearing_sweater(pattern_description="snowflake pattern")`.
+    * "Make me wear this sweater" (with uploaded photo) -> Call `generate_wearing_sweater(pattern_description="...", image_path="/path/to/photo.jpg")`.
+    * "Make a holiday scene" -> Call `generate_holiday_scene`.
+    * "Design a sweater pattern" -> Call `generate_sweater_pattern`.
+    * "Make me wear this sweater" (with uploaded photo) -> Call generate_wearing_sweater(pattern_description="...", image_path="/path/to/photo.jpg")
+    * "Make a holiday scene" -> Call generate_holiday_scene
+    * "Design a sweater pattern" -> Call generate_sweater_pattern
+
+    * "Apply classic preset" -> Call `apply_preset("classic")`
+    * "Make it snowy" -> Call `apply_preset("snow")`
+    * "Make it romantic" -> Call `apply_preset("romantic")`
+    * "Make it minimal" -> Call `apply_preset("minimal")`
+
 """
 
 # Path to the MCP server script
@@ -136,7 +187,8 @@ import asyncio
 async def add_session_to_memory(
         callback_context: CallbackContext
 ) -> Optional[types.Content]:
-    """Automatically save completed sessions to memory bank in the background"""
+    # Automatically save completed sessions to memory bank in the background
+    
     if hasattr(callback_context, "_invocation_context"):
         invocation_context = callback_context._invocation_context
         if invocation_context.memory_service:
@@ -158,6 +210,7 @@ agent_tools = [
     update_tree_config,
     get_tree_state,
     analyze_image_and_suggest_texture,
+    apply_preset,
     McpToolset(
         connection_params=StdioConnectionParams(
             server_params=StdioServerParameters(

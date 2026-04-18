@@ -2,6 +2,8 @@ import React, { useMemo, useRef, useState, useLayoutEffect } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { TreeMode } from '../types';
+import { useStore } from '../store';
+
 
 interface OrnamentsProps {
   mode: TreeMode;
@@ -23,6 +25,7 @@ interface InstanceData {
 export const Ornaments: React.FC<OrnamentsProps> = ({ mode, count }) => {
   // We use 3 separate InstancedMeshes for different geometries/materials to reduce draw calls
   // but allow unique shapes.
+  const treeState = useStore((state) => state.treeState);
   const ballsRef = useRef<THREE.InstancedMesh>(null);
   const giftsRef = useRef<THREE.InstancedMesh>(null);
   const lightsRef = useRef<THREE.InstancedMesh>(null);
@@ -39,13 +42,47 @@ export const Ornaments: React.FC<OrnamentsProps> = ({ mode, count }) => {
     const maxRadius = 4.5;
 
     // Cute / Pastel Palette
-    const pink = new THREE.Color("#FF9AA2");
-    const mint = new THREE.Color("#B5EAD7");
-    const peach = new THREE.Color("#FFDAC1");
-    const lavender = new THREE.Color("#E0BBE4");
-    const babyBlue = new THREE.Color("#92A8D1");
+    
+let palette: THREE.Color[] = [];
+let lightColor = new THREE.Color("#FFEEAA");
 
-    const palette = [pink, mint, peach, lavender, babyBlue];
+if (treeState.theme === "rose_gold") {
+  palette = [
+    new THREE.Color("#FFB6C1"),
+    new THREE.Color("#F8C8DC"),
+    new THREE.Color("#E6A4B4"),
+    new THREE.Color("#D8BFD8"),
+    new THREE.Color("#FFC0CB"),
+  ];
+  lightColor = new THREE.Color("#FFD6E8");
+} else if (treeState.theme === "snow_crystal") {
+  palette = [
+    new THREE.Color("#DFF6FF"),
+    new THREE.Color("#B8E8FC"),
+    new THREE.Color("#CFE8FF"),
+    new THREE.Color("#EAF6FF"),
+    new THREE.Color("#A7D8FF"),
+  ];
+  lightColor = new THREE.Color("#EAFBFF");
+} else if (treeState.theme === "minimal_white") {
+  palette = [
+    new THREE.Color("#F5F5F5"),
+    new THREE.Color("#E8E8E8"),
+    new THREE.Color("#DADADA"),
+    new THREE.Color("#FFFFFF"),
+    new THREE.Color("#CFCFCF"),
+  ];
+  lightColor = new THREE.Color("#FFFBEA");
+} else {
+  palette = [
+    new THREE.Color("#FF9AA2"),
+    new THREE.Color("#B5EAD7"),
+    new THREE.Color("#FFDAC1"),
+    new THREE.Color("#E0BBE4"),
+    new THREE.Color("#92A8D1"),
+  ];
+  lightColor = new THREE.Color("#FFEEAA");
+}
 
     for (let i = 0; i < count; i++) {
       const rnd = Math.random();
@@ -82,7 +119,7 @@ export const Ornaments: React.FC<OrnamentsProps> = ({ mode, count }) => {
       );
 
       const scale = type === 'light' ? 0.15 : (0.2 + Math.random() * 0.25);
-      const color = type === 'light' ? new THREE.Color("#FFFFAA") : palette[Math.floor(Math.random() * palette.length)];
+     const color = type === 'light' ? lightColor : palette[Math.floor(Math.random() * palette.length)];
 
       const data: InstanceData = {
         chaosPos,
@@ -100,7 +137,7 @@ export const Ornaments: React.FC<OrnamentsProps> = ({ mode, count }) => {
     }
 
     return { ballsData: _balls, giftsData: _gifts, lightsData: _lights };
-  }, [count]);
+  }, [count, treeState.theme]);
 
   useLayoutEffect(() => {
     // Set initial colors
