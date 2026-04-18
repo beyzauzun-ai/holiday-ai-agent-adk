@@ -25,6 +25,69 @@ Originally built as a simple codelab, this project has evolved into a more advan
 
 🖼️ Live Demo Preview
 
+🤖 AI Interaction
+
+The agent understands context and provides real-time personalized responses through an interactive chat interface.
+
+⸻
+
+✨ Features
+
+* 🤖 AI Agent with memory (context-aware interactions)
+* 🧠 MCP (Model Context Protocol) integration
+* 🎨 Interactive 3D UI (React + Three.js)
+* ⚡ Real-time responses (Gemini)
+* ☁️ Deployed on Google Cloud Run
+* 🔄 Full-stack AI system
+
+⸻
+
+🛠️ Tech Stack
+
+* Google ADK
+* MCP (Model Context Protocol)
+* Gemini (LLM)
+* Python (Backend)
+* React + Three.js (Frontend)
+* Google Cloud Run
+
+⸻
+
+🧩 Architecture
+
+* Agent Layer → reasoning & decision making
+* Memory Layer → context retention
+* MCP Layer → tool orchestration
+* Frontend → interactive 3D UI
+* Backend → AI logic & API
+
+⸻
+
+📂 Project Structure
+
+* backend/ → AI agent & API
+* frontend/ → React + 3D UI
+* static/ → generated outputs & visuals
+
+⸻
+
+💡 What I Learned
+
+* Building AI agents with memory
+* Structuring agent-based systems
+* Integrating LLMs with UI
+* Deploying full-stack AI applications
+* Combining AI with interactive 3D experiences
+
+⸻
+
+🔮 Future Improvements
+
+* Multi-agent workflows
+* Voice interaction
+* Enhanced personalization
+* More advanced UI animations
+
 ## Before the upgrate
 
 This project demonstrates a context-aware AI agent built using Google ADK, MCP (Model Context Protocol), and Gemini 2.5 Flash, capable of orchestrating multiple tools and steps to complete complex tasks autonomously.
