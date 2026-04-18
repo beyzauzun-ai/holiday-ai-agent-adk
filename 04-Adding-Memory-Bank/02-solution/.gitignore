@@ -1,18 +1,7 @@
-# Dependencies
 node_modules/
-package-lock.json
-
-
-# Python
 __pycache__/
 *.pyc
-
-# Environment variables
 .env
-
-# System
 .DS_Store
-
-# Build
 dist/
 build/
