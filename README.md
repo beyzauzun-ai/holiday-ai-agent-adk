@@ -13,7 +13,7 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 
 ## 🎥 Demo Video  
 
-👉 Coming soon...
+👉 https://www.linkedin.com/posts/beyza-uzun-1520672b5_ai-machinelearning-googlecloud-ugcPost-7451612188865282048-HVSI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEumJg4BDP9c3iLiOmqBOs-X4Iyb0soZjR0
 
 ## 🎥 Demo Preview
 
