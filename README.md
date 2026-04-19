@@ -12,7 +12,7 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 
 ## 🎥 Demo Video  
 
-👉 Caming soon...
+👉 Coming soon...
 
 ## 🎥 Demo Preview
 
