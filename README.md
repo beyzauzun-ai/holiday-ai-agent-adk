@@ -23,6 +23,8 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 
 ## 🖇️ How it works
 
+This system follows a modular AI agent architecture:
+
 1. User input is processed by the agent
 2. ADK orchestrates reasoning and tool usage
 3. MCP connects external tools
