@@ -1,4 +1,5 @@
-# 🎄 Holiday AI Agent (ADK + MCP + Gemini)
+# 🎄 Holiday AI Agent  
+### Context-Aware Multi-Agent System (ADK + MCP + Gemini)
 
 An AI agent that doesn’t just respond — it creates interactive experiences.
 
