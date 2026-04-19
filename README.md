@@ -13,6 +13,10 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 ## 🎥 Demo Video  
 👉 https://www.linkedin.com/in/beyza-uzun-1520672b5/
 
+## 🎥 Demo Preview
+
+![Demo](demo.gif)
+
 ⸻
 
 🧠 What’s new (Update)
