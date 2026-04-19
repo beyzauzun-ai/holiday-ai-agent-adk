@@ -45,8 +45,6 @@ Originally built as a simple codelab, this project has evolved into a more advan
 
 ⸻
 
-🖼️ Live Demo Preview
-
 🤖 AI Interaction
 
 The agent understands context and provides real-time personalized responses through an interactive chat interface.
