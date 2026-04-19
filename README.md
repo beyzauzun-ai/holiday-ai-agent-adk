@@ -11,9 +11,10 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 
 👉 https://holiday-app-194383643137.us-central1.run.app/
 
-## 🎥 Demo Video  
+## 🎥 Demo Video
 
-👉 https://www.linkedin.com/posts/beyza-uzun-1520672b5_ai-machinelearning-googlecloud-ugcPost-7451612188865282048-HVSI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEumJg4BDP9c3iLiOmqBOs-X4Iyb0soZjR0
+👉 Watch on LinkedIn:  
+https://www.linkedin.com/posts/beyza-uzun-1520672b5_ai-machinelearning-googlecloud-ugcPost-7451612188865282048-HVSI
 
 ## 🎥 Demo Preview
 
