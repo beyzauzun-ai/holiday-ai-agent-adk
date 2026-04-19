@@ -11,7 +11,8 @@ An AI agent that doesn’t just respond — it creates interactive experiences.
 👉 https://holiday-app-194383643137.us-central1.run.app/
 
 ## 🎥 Demo Video  
-👉 https://www.linkedin.com/in/beyza-uzun-1520672b5/
+
+👉 Caming soon...
 
 ## 🎥 Demo Preview
 
